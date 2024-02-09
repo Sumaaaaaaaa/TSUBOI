@@ -12,10 +12,10 @@ void loop() {
     Wire.beginTransmission(0x04);
     char a = Serial.read();
     Wire.write(a);
-    //Serial.println(a);
     int result = Wire.endTransmission();
-    //Serial.print("Result = ");
-    //Serial.println(result);
+    Serial.print(int(a));
+    Serial.print("...");
+    Serial.println(result);
   }
 
 }
